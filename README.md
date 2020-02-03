@@ -7,5 +7,7 @@ This helpful scheduler app functions as a digital day planner to help organize y
 The scheduler is also color-coded to help keep track of your day. Each hourly field will change colors based on the time of day:
 
 --The hour will show green if it is upcoming later in the day
+
 --The hour will show red if it is currently in that hour
+
 --The hour will show gray if that hour has already passed today
