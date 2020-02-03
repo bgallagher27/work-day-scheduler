@@ -164,4 +164,13 @@ $(document).ready(function() {
         $("#4pm").addClass("future");
     };
 
+    // 5 pm timebox colors
+    if (moment().format('LT') > "6:00 PM - 11:59 PM") {
+        $("#5pm").addClass("past");
+    } else if (moment().format('LT') === "5:00 PM - 5:59 PM") {
+        $("#5pm").addClass("present");
+    } else {
+        $("#5pm").addClass("future");
+    };
+
 });
