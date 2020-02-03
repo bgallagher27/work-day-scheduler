@@ -137,4 +137,13 @@ $(document).ready(function() {
         $("#1pm").addClass("future");
     };
 
+    // 2 pm timebox colors
+    if (moment().format('LT') > "3:00 PM - 11:59 PM") {
+        $("#2pm").addClass("past");
+    } else if (moment().format('LT') === "2:00 PM - 2:59 PM") {
+        $("#2pm").addClass("present");
+    } else {
+        $("#2pm").addClass("future");
+    };
+
 });
