@@ -42,4 +42,14 @@ $(document).ready(function() {
     console.log(myWork12);
     $("#12pm").val(myWork12);
 
+    // This is the 1 pm timebox
+    $("#save1").on("click" , function() {
+        let pm1 = $("#1pm").val();
+        localStorage.setItem("1oClock" , JSON.stringify(pm1));
+    });
+
+    let myWork1 = JSON.parse(localStorage.getItem("1oClock"));
+    console.log(myWork1);
+    $("#1pm").val(myWork1);
+
 });
