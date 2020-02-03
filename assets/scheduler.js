@@ -110,4 +110,22 @@ $(document).ready(function() {
         $("#10am").addClass("future");
     };
 
+     // 11 am timebox colors
+     if (moment().format('LT') > "12:00 PM - 11:59 PM") {
+        $("#11am").addClass("past");
+    } else if (moment().format('LT') === "11:00 AM -11:59 AM") {
+        $("#11am").addClass("present");
+    } else {
+        $("#11am").addClass("future");
+    };
+
+     // 12 pm timebox colors
+     if (moment().format('LT') > "1:00 PM - 11:59 PM") {
+        $("#9am").addClass("past");
+    } else if (moment().format('LT') === "12:00 PM - 12:59 PM") {
+        $("#9am").addClass("present");
+    } else {
+        $("#9am").addClass("future");
+    };
+
 });
