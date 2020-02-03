@@ -121,11 +121,20 @@ $(document).ready(function() {
 
      // 12 pm timebox colors
      if (moment().format('LT') > "1:00 PM - 11:59 PM") {
-        $("#9am").addClass("past");
+        $("#12pm").addClass("past");
     } else if (moment().format('LT') === "12:00 PM - 12:59 PM") {
-        $("#9am").addClass("present");
+        $("#12pm").addClass("present");
     } else {
-        $("#9am").addClass("future");
+        $("#12pm").addClass("future");
+    };
+
+    // 1 pm timebox colors
+    if (moment().format('LT') > "2:00 PM - 11:59 PM") {
+        $("#1pm").addClass("past");
+    } else if (moment().format('LT') === "1:00 PM - 1:59 PM") {
+        $("#1pm").addClass("present");
+    } else {
+        $("#1pm").addClass("future");
     };
 
 });
