@@ -92,4 +92,12 @@ $(document).ready(function() {
     console.log(myWork5);
     $("#5pm").val(myWork5);
 
+    if (moment().format('LT') > "10:00 AM - 11:59 PM") {
+        $("#9am").addClass("past");
+    } else if (moment().format('LT') === "9:00 AM - 9:59 AM") {
+        $("#9am").addClass("present");
+    } else {
+        $("#9am").addClass("future");
+    };
+
 });
