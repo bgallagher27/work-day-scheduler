@@ -32,4 +32,14 @@ $(document).ready(function() {
     console.log(myWork11);
     $("#11am").val(myWork11);
 
+    // This is the 12 pm timebox
+    $("#save12").on("click" , function() {
+        let pm12 = $("#12pm").val();
+        localStorage.setItem("12oClock" , JSON.stringify(pm12));
+    });
+
+    let myWork12 = JSON.parse(localStorage.getItem("12oClock"));
+    console.log(myWork12);
+    $("#12pm").val(myWork12);
+
 });
