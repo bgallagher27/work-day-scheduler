@@ -92,12 +92,22 @@ $(document).ready(function() {
     console.log(myWork5);
     $("#5pm").val(myWork5);
 
+    // 9 am timebox colors
     if (moment().format('LT') > "10:00 AM - 11:59 PM") {
         $("#9am").addClass("past");
     } else if (moment().format('LT') === "9:00 AM - 9:59 AM") {
         $("#9am").addClass("present");
     } else {
         $("#9am").addClass("future");
+    };
+
+     // 10 am timebox colors
+     if (moment().format('LT') > "11:00 AM - 11:59 PM") {
+        $("#10am").addClass("past");
+    } else if (moment().format('LT') === "10:00 AM - 10:59 AM") {
+        $("#10am").addClass("present");
+    } else {
+        $("#10am").addClass("future");
     };
 
 });
